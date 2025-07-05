@@ -1,0 +1,28 @@
+name: Crear Ticket Jira - Despliegue
+
+on:
+  workflow_dispatch:  # Solo se ejecuta manualmente para pruebas
+
+jobs:
+  create_ticket:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Crear Ticket en Jira
+      run: |
+        echo "Creando ticket en Jira..."
+        response=$(curl -s -X POST \
+          -H "Content-Type: application/json" \
+          -u "${{ secrets.JIRA_USER_EMAIL }}:${{ secrets.JIRA_API_TOKEN }}" \
+          --data '{
+            "fields": {
+              "project": { "key": "SCRUM" },
+              "summary": "Despliegue exitoso en producción",
+              "description": "El proyecto Music Store fue desplegado correctamente en producción.",
+              "issuetype": { "name": "Task" }
+            }
+          }' "${{ secrets.JIRA_BASE_URL }}/rest/api/2/issue/")
+
+        issue_key=$(echo "$response" | grep -o '"key":"[^"]*' | cut -d':' -f2 | tr -d '"')
+        echo "✅ Ticket creado: $issue_key"
+        echo "🔗 URL del ticket: ${{ secrets.JIRA_BASE_URL }}/browse/$issue_key"
