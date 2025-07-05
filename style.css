@@ -1,0 +1,181 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d12b2b;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #d12b2b;
+}
+
+/* Banner principal */
+.banner {
+  position: relative;
+  background-image: url('img/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Categorías */
+.categories {
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.categories h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+.categories .items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.category-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 180px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.category-item img {
+  width: 120px;   /* Ancho fijo */
+  height: 120px;  /* Alto fijo */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.category-item p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Ofertas */
+.offers {
+  background-color: #fff;
+  padding: 50px 40px;
+}
+
+.offers h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.offer-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.offer-item {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.offer-item img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.offer-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.offer-item p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.offer-item button {
+  background-color: #d12b2b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.offer-item button:hover {
+  background-color: #a72121;
+}
+
+/* Botón de favoritos */
+.favorito-btn {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.favorito-btn.activo {
+  background-color: green;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #555;
+}

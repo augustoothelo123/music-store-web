@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guitar Store - Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Guitar Store</div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Promociones</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>¡Sonido Profesional Para ti!</h1>
+  </section>
+
+  <!-- Categorías -->
+  <section class="categories">
+    <h2>Categorías Populares</h2>
+    <div class="items">
+      <div class="category-item">
+        <img src="img/imagen3.jpg" alt="Audio">
+        <p>Audio Profesional</p>
+      </div>
+      <div class="category-item">
+        <img src="img/imagen1.jpg" alt="Guitarras">
+        <p>Guitarras</p>
+      </div>
+      <div class="category-item">
+        <img src="img/imagen2.jpg" alt="Micrófonos">
+        <p>Micrófonos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ofertas -->
+  <section class="offers">
+    <h2>Últimas Ofertas</h2>
+    <div class="offer-items">
+      <div class="offer-item">
+        <img src="https://via.placeholder.com/220x150" alt="Auriculares">
+        <h3>Auriculares Pro</h3>
+        <p>$120.00</p>
+        <button>Agregar al carrito</button>
+        <button class="favorito-btn" onclick="toggleFavorito(this)">Agregar a favoritos ❤️</button>
+      </div>
+      <div class="offer-item">
+        <img src="https://via.placeholder.com/220x150" alt="Micrófono">
+        <h3>Micrófono Studio</h3>
+        <p>$95.00</p>
+        <button>Agregar al carrito</button>
+        <button class="favorito-btn" onclick="toggleFavorito(this)">Agregar a favoritos ❤️</button>
+      </div>
+      <div class="offer-item">
+        <img src="https://via.placeholder.com/220x150" alt="Guitarra">
+        <h3>Guitarra Eléctrica</h3>
+        <p>$350.00</p>
+        <button>Agregar al carrito</button>
+        <button class="favorito-btn" onclick="toggleFavorito(this)">Agregar a favoritos ❤️</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Guitar Store - Todos los derechos reservados.
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
